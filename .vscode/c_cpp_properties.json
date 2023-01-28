@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/psh/yolo_ws/devel/include/**",
+        "/home/psh/Test_ws/devel/include/**",
+        "/home/psh/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/psh/Test_ws/src/Auto-Docking-ROS/include/**",
+        "/home/psh/Test_ws/src/RGBD-VO/include/**",
+        "/home/psh/Test_ws/src/dynamic_object_detection/include/**",
+        "/home/psh/catkin_ws/src/lidar_camera/include/**",
+        "/home/psh/Test_ws/src/mux_core_pkg/include/**",
+        "/home/psh/Test_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/psh/Test_ws/src/realsense_test/include/**",
+        "/home/psh/yolo_ws/src/test-pkg/include/**",
+        "/home/psh/catkin_ws/src/usb_cam/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

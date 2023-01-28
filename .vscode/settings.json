@@ -1,0 +1,8 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/psh/yolo_ws/devel/lib/python3/dist-packages",
+        "/home/psh/Test_ws/devel/lib/python3/dist-packages",
+        "/home/psh/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}
