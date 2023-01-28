@@ -15,6 +15,8 @@ bool bFlag = false;
 
 std::vector<cv::Point2f> p0, p1;
 bool bDynamic_flag = false;
+int cnt = 0;
+int nDynamicArray[3] = {0, };
 
 void Test(cv::Mat imgP, cv::Mat imgC, std::vector<yolov7_ros::Object> detected_person);
 class NodeServer{
@@ -82,9 +84,22 @@ void NodeServer::callback(const sensor_msgs::ImageConstPtr &rgb_msg, const senso
         Test(rgb_image, cv_mPreImgC, _v_detected_person);
     }
     //
+    if(bDynamic_flag)nDynamicArray[cnt] = 1;
+    else nDynamicArray[cnt] = 0;
+    cnt++;
+
+    if(cnt == 3)cnt = 0;
+
+    bool bDynamicEnvironment = true;
+    for(int i = 0; i < 3; i++){
+        if(nDynamicArray[i] == 0){
+            bDynamicEnvironment = false;
+            break;
+        }
+    }
 
     std_msgs::Int32 msg;
-    if(bDynamic_flag)msg.data = 1;
+    if(bDynamicEnvironment)msg.data = 1;
     else msg.data = 0;
      
     _pub.publish(msg);
